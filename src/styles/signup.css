@@ -1,0 +1,85 @@
+.color-button-sign {
+    color: #ffffff;
+    background-color: #006186;
+    border-color: #006186;
+    border: 2px solid #006186;
+    border-radius: 5px;
+    padding: 13px;
+    margin-top: 30px;
+ }
+ 
+ 
+ .register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .register .card {
+    width: 400cm;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    overflow: hidden;
+ }
+ .register .card .left {
+    flex: 1;
+    background-size: cover;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: black;
+ }
+ .register .card .left h1 {
+    font-size: 100px;
+    line-height: 100px;
+ }
+ .register .card .left span {
+    font-size: 14px;
+ }
+ .register .card .left button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: #006186;
+    font-weight: bold;
+    cursor: pointer;
+ }
+ .register .card .right {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+ }
+ .register .card .right h1 {
+    color: black;
+ }
+ .register .card .right form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+ }
+ .register .card .right form input {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 20px 10px;
+ }
+ .register .card .right form button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: #006186;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+ }
+ 
+ 
+ .ya{
+    justify-content: left;
+    align-items: left;
+ }
+ 

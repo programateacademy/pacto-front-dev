@@ -1,0 +1,53 @@
+.mw-image {
+    max-width: 10% !important;
+}
+
+.color-corp {
+    color: #006186 !important;
+}
+
+.color-corp:hover {
+    color: #006186 !important;
+}
+
+.mw-image-nav-left {
+    max-width: 10% !important;
+}
+
+.mw-icon-nav-left {
+    max-width: 10% !important;
+}
+
+.mw-icon-nav-right {
+    max-width: 20% !important;
+}
+
+.mw-icon-nav-right-sug {
+    max-width: 20% !important;
+}
+
+.mw-icon-post {
+    max-width: 12% !important;
+}
+
+.mw-icon-file {
+    max-width: 10% !important;
+}
+
+.button-size-l {
+    min-width: 20%;
+}
+
+.border-active-none {
+    border: none !important;
+}
+
+.border-active-none:focus-visible {
+    outline:0px !important;
+    box-shadow: none !important;
+}
+
+.border-active-none:focus {
+    outline:0px !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,23 @@
+.mw-image-perfil {
+    max-width: 15%;
+    height: auto;
+}
+
+.bg-perfil {
+    background-color: #F6F3F3;
+}
+
+.icon-size {
+    max-width: 2.5%;
+    height: auto;
+}
+
+.color-corp-boton {
+    color: #FFFFFF !important;
+    background-color: #006186 !important;
+    border-color: #006186 !important;
+}
+
+.color-icon {
+    color: #006186 !important;
+}

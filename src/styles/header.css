@@ -1,0 +1,13 @@
+.text-color-header {
+    color: #23282D;
+    font-weight: 5px;
+    font-size: 15.4px;
+ }
+ 
+.border-nav-color {
+   border-bottom: 2px solid #006186;
+}
+
+.color-icon-l {
+color: #006186 !important;
+}

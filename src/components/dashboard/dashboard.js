@@ -63,9 +63,9 @@ const Dashboard = () => {
                                                     <a className='text-decoration-none text-dark' href='#'><p className='mb-0 fw-bold'>Usuario 3</p></a>
                                                 </div>
                                             </div>
-                                            <div class="d-flex justify-content-end align-items-center" role="group" aria-label="Basic mixed styles example">
-                                                <button type="button" class="btn btn-success text-white mx-2">Aceptar</button>
-                                                <button type="button" class="btn bg-danger text-white mx-2">Rechazar</button>
+                                            <div className="d-flex justify-content-end align-items-center" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" className="btn btn-success text-white mx-2">Aceptar</button>
+                                                <button type="button" className="btn bg-danger text-white mx-2">Rechazar</button>
                                             </div>
                                         </div>
                                         <div className="d-flex justify-content-between mb-2 pb-2 border-bottom">
@@ -99,9 +99,9 @@ const Dashboard = () => {
                                                     <a className='text-decoration-none text-dark' href='#'><p className='mb-0 fw-bold'>Usuario 6</p></a>
                                                 </div>
                                             </div>
-                                            <div class="d-flex justify-content-end align-items-center" role="group" aria-label="Basic mixed styles example">
-                                                <button type="button" class="btn btn-success text-white mx-2">Aceptar</button>
-                                                <button type="button" class="btn bg-danger text-white mx-2">Rechazar</button>
+                                            <div className="d-flex justify-content-end align-items-center" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" className="btn btn-success text-white mx-2">Aceptar</button>
+                                                <button type="button" className="btn bg-danger text-white mx-2">Rechazar</button>
                                             </div>
                                         </div>
                                         <div className="d-flex justify-content-between">
@@ -111,9 +111,9 @@ const Dashboard = () => {
                                                     <a className='text-decoration-none text-dark' href='#'><p className='mb-0 fw-bold'>Usuario 7</p></a>
                                                 </div>
                                             </div>
-                                            <div class="d-flex justify-content-end align-items-center" role="group" aria-label="Basic mixed styles example">
-                                                <button type="button" class="btn btn-success text-white mx-2">Aceptar</button>
-                                                <button type="button" class="btn bg-danger text-white mx-2">Rechazar</button>
+                                            <div className="d-flex justify-content-end align-items-center" role="group" aria-label="Basic mixed styles example">
+                                                <button type="button" className="btn btn-success text-white mx-2">Aceptar</button>
+                                                <button type="button" className="btn bg-danger text-white mx-2">Rechazar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -134,9 +134,9 @@ const Dashboard = () => {
                                         <div className="card-body border-bottom mb-2">
                                             <p className="mb-3 tx-14 text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus minima delectus nemo unde quae recusandae assumenda.</p>
                                         </div>
-                                        <div class="d-flex justify-content-center align-items-center" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-success text-white mx-2">Aceptar</button>
-                                            <button type="button" class="btn bg-danger text-white mx-2">Rechazar</button>
+                                        <div className="d-flex justify-content-center align-items-center" role="group" aria-label="Basic mixed styles example">
+                                            <button type="button" className="btn btn-success text-white mx-2">Aceptar</button>
+                                            <button type="button" className="btn bg-danger text-white mx-2">Rechazar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -166,9 +166,9 @@ const Dashboard = () => {
                                             </div>
                                             <p className='fw-normal'>Vivamus tristique finibus quam ac placerat. Phasellus tincidunt efficitur libero, sed pretium ipsum porttitor eget. Quisque id lorem nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec euismod id metus vel finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce ut turpis id nunc aliquam rutrum. Aenean aliquet mattis fringilla.</p>
                                         </div>
-                                        <div class="d-flex justify-content-center align-items-center mt-2" role="group" aria-label="Basic mixed styles example">
-                                            <button type="button" class="btn btn-success text-white mx-2">Aceptar</button>
-                                            <button type="button" class="btn bg-danger text-white mx-2">Rechazar</button>
+                                        <div className="d-flex justify-content-center align-items-center mt-2" role="group" aria-label="Basic mixed styles example">
+                                            <button type="button" className="btn btn-success text-white mx-2">Aceptar</button>
+                                            <button type="button" className="btn bg-danger text-white mx-2">Rechazar</button>
                                         </div>
                                     </div>
                                 </div>

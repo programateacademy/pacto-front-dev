@@ -3,7 +3,10 @@ import React, { useState, useEffect } from "react";
 import Footer from "../footer/footer";
 import Header from "../header/header";
 import axios from "axios";
-import Avatar from '../img/perfil.png';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// import Avatar from '../img/perfil.png';
 
 function Signup() {
 
@@ -23,7 +26,7 @@ function Signup() {
   const [departments, setDepartments] = useState([]);
   const [description, setDescription] = useState("");
   const [knowledge_interests, setKnowledge_interests] = useState("");
-  const [image_profile, setImage_profile] = useState("");//New
+  // const [image_profile, setImage_profile] = useState("");//New
 
   //   for the terms and conditions
   const [userData, setUserData] = useState({
@@ -34,7 +37,8 @@ function Signup() {
     const formData = new FormData();
     formData.append("image_profile", event.target.files[0]);
     // console.log(event.target.files)
-    setImage_profile(URL.createObjectURL(event.target.files[0]));
+    
+    // setImage_profile(URL.createObjectURL(event.target.files[0]));
 
   //   axios.post("http://localhost:8000/uploadfile/", formData)
   //     .then(response => {
@@ -52,9 +56,14 @@ function Signup() {
     // form_data.append("id_type_actor", type_actor_id)
     // console.log (form_data)
     const formDataObj = Object.fromEntries(form_data.entries());
+    console.log({formDataObj})
+    
 
     axios.post("http://localhost:8000/api/user/post", formDataObj).then((response) => {
-      window.location.href = '/waiting_confirmation';
+      if(response.data.message === "Se ha creado el usuario correctamente"){
+        console.log(response)
+        window.location.href = '/waiting_confirmation';
+      }
     })
       .catch((error) => {
         console.log(error);
@@ -140,7 +149,7 @@ function Signup() {
                     <h3 className="text-start fw-bold">FORMULARIO DE REGISTRO</h3>
                   </div>
                 </div>
-                <h4 className='fw-bold text-center'>Foto de perfil</h4>
+                {/* <h4 className='fw-bold text-center'>Foto de perfil</h4>
                 <div className='mb-4 mt-4 text-center'>
                   <img
                     src={image_profile}
@@ -149,26 +158,32 @@ function Signup() {
                     loading="lazy"
                     name="image_profile"
                   />
-                </div>
+                </div> */}
                 <div className='row text-start'>
-                  <div class="col">
+                  {/* <div class="col">
                     <label className="form-label fw-bold" for="form3Example4">Seleccione un foto de perfil:</label>
                     <input type="file" className="form-control" name="image" placeholder="Inserte sus nombres" onChange={handleImageUpload} />                  
-                  </div>
+                  </div> */}
                 </div>
                 <div className="row text-start">
                   <div className="col">
-                    <label className="form-label fw-bold" htmlFor="form3Example4"> Nombres:</label>
+                    <a className="link--edit--profile" href="https://www.youtube.com/watch?v=V9auOG6U0rY&list=PLCndDt4b5CnzTI2HgQ3knxXHcl5dsGNQe&index=15" target="_blank" rel="noreferrer">
+                      <label className="form-label fw-bold" >Nombres <FontAwesomeIcon className="icon--youtube" icon={faYoutube} /> :</label>
+                    </a>
                     <input type="text" className="form-control" placeholder="Inserte sus nombres" name="name_user" value={name_user} onChange={(e) => setName(e.target.value)} />
                   </div>
                   <div className="col">
-                    <label className="form-label fw-bold" htmlFor="form3Example4">Apellidos:</label>
+                    <a className="link--edit--profile" href="https://www.youtube.com/watch?v=aNWSJpAvs1g&list=PLCndDt4b5CnzTI2HgQ3knxXHcl5dsGNQe&index=22&ab_channel=PactodeProductividad" target="_blank" rel="noreferrer">
+                      <label className="form-label fw-bold" >Apellidos <FontAwesomeIcon className="icon--youtube" icon={faYoutube} /> :</label>
+                    </a>
                     <input type="text" className="form-control" placeholder="Inserte sus apellidos" name="lastname" value={lastname} onChange={(e) => setLastname(e.target.value)} />
                   </div>
                 </div>
                 <div className="row text-start">
                   <div className="col">
-                    <label className="form-label fw-bold" htmlFor="form3Example4">Tipo de actor social:</label>
+                    <a className="link--edit--profile" href="https://www.youtube.com/watch?v=CrY7GS6KKnM&list=PLCndDt4b5CnzTI2HgQ3knxXHcl5dsGNQe&index=4" target="_blank" rel="noreferrer">
+                      <label className="form-label fw-bold" >Tipo de actor social <FontAwesomeIcon className="icon--youtube" icon={faYoutube} /> :</label>
+                    </a>
                     <select className="form-select" name="id_type_actor">
                       {id_type_actor.map((actor) => (
                         <option key={actor.id} value={actor.id}>
@@ -178,7 +193,9 @@ function Signup() {
                     </select>
                   </div>
                   <div className="col">
-                    <label className="form-label fw-bold" htmlFor="form3Example3">Correo electrónico:</label>
+                    <a className="link--edit--profile" href="https://www.youtube.com/watch?v=JX51GuYLHlY&list=PLCndDt4b5CnzTI2HgQ3knxXHcl5dsGNQe&index=9&pp=iAQB&ab_channel=PactodeProductividad" target="_blank" rel="noreferrer">
+                      <label className="form-label fw-bold" for="correo">Correo electrónico <FontAwesomeIcon className="icon--youtube" icon={faYoutube} /> :</label>
+                    </a>
                     <input type="email" className="form-control" placeholder="Inserte su correo electrónico" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                   </div>
                 </div>
@@ -194,11 +211,15 @@ function Signup() {
                 </div>
                 <div className="row text-start">
                   <div className="col">
-                    <label className="form-label fw-bold" htmlFor="form3Example3">Nombre de la entidad:</label>
+                    <a className="link--edit--profile" href="https://www.youtube.com/watch?v=R_diAHMkn9o&list=PLCndDt4b5CnzTI2HgQ3knxXHcl5dsGNQe&index=14&ab_channel=PactodeProductividad" target="_blank" rel="noreferrer">
+                      <label className="form-label fw-bold">Nombre de la entidad <FontAwesomeIcon className="icon--youtube" icon={faYoutube} /> :</label>
+                    </a>
                     <input className="form-control" placeholder="Inserte el nombre d ela entidad" name="name_enti" value={name_enti} onChange={(e) => setNameEnti(e.target.value)} />
                   </div>
                   <div className="col text-start">
-                    <label className="form-label fw-bold" htmlFor="form3Example4">Aportes a la comunidad:</label>
+                    <a className="link--edit--profile" href="https://www.youtube.com/watch?v=u_YBKRgBI5c&list=PLCndDt4b5CnzTI2HgQ3knxXHcl5dsGNQe&index=27&ab_channel=PactodeProductividad" target="_blank" rel="noreferrer">
+                      <label className="form-label fw-bold" >Aportes a la comunidad <FontAwesomeIcon className="icon--youtube" icon={faYoutube} /> :</label>
+                    </a>
                     <select className="form-select" name="id_contribution">
                       {id_contribution.map((contribution) => (
                         <option key={contribution.id} value={contribution.id} >
@@ -210,7 +231,9 @@ function Signup() {
                 </div>
                 <div className="row text-start">
                   <div className="col">
-                    <label className="form-label fw-bold" for="form3Example4">Contacto:</label>
+                    <a className="link--edit--profile" href="https://www.youtube.com/watch?v=kPuMJbbhUHI&list=PLCndDt4b5CnzTI2HgQ3knxXHcl5dsGNQe&index=24&ab_channel=PactodeProductividad" target="_blank" rel="noreferrer">
+                      <label className="form-label fw-bold">Contacto <FontAwesomeIcon className="icon--youtube" icon={faYoutube} /> :</label>
+                    </a>
                     <input type="text" className="form-control" placeholder="Contacto" name="phone_number" value={phone_number} onChange={(e) => setPhone_number(e.target.value)} />
                     <label className="form-label fw-bold" htmlFor="form3Example1">País:</label>
                     <select className="form-select" name="country" onChange={handleCountryChange}>
@@ -240,7 +263,9 @@ function Signup() {
                     </select>
                   </div>
                   <div className="col">
-                    <label className="form-label fw-bold" htmlFor="form3Example3"> Ciudad:</label>
+                    <a className="link--edit--profile" href="https://www.youtube.com/watch?v=Z6j5i7u1otc&list=PLCndDt4b5CnzTI2HgQ3knxXHcl5dsGNQe&index=17&pp=iAQB&ab_channel=PactodeProductividad" target="_blank" rel="noreferrer">
+                      <label className="form-label fw-bold" >Ciudad <FontAwesomeIcon className="icon--youtube" icon={faYoutube} /> :</label>
+                    </a>
                     <select className="form-select" name="id_city">
                       <option value="">Seleccione una ciudad</option>
                       {id_city.map((city) => (

@@ -1,0 +1,11 @@
+.img-fluid {
+    border-radius: 6px;
+}
+
+
+.showModal {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}

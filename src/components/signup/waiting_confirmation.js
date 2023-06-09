@@ -25,7 +25,7 @@ class waiting_confirmation extends React.Component {
                       size="lg"
                       type="button"
                       active
-                      onClick={() => window.location.href='https://www.pactodeproductividad.com/'}
+                      onClick={() => window.location.href='http://localhost:3000/'}
                     >
                       Volver a Inicio
                     </Button>

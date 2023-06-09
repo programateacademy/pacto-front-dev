@@ -1,6 +1,7 @@
-import { faBars,  faUser, faMagnifyingGlass, faUniversalAccess } from '@fortawesome/free-solid-svg-icons';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { faBars,  faUser, faUniversalAccess } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Logo from '../img/cropped-logo_positivo.png';
+import Logo from '../../assets/img/cropped-logo_positivo.png';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import React from 'react';
 
@@ -33,27 +34,27 @@ class Header extends React.Component {
                         />
                     </a>
 
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items ">
                         <li className="nav-item">
-                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/'>Inicio</a>
+                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/' target='_blank'>Inicio</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/11/01/sobre-nosotros/'>Sobre nosotros</a>
+                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/11/01/sobre-nosotros/' target='_blank'>Sobre nosotros</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/12/26/modelo-territorial/'>Modelo Territorial</a>
+                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/12/26/modelo-territorial/' target='_blank'>Modelo Territorial</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/11/01/que-hacemos/'>Lo que hacemos</a>
+                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/11/01/que-hacemos/' target='_blank'>Lo que hacemos</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/11/01/conocimiento/'>Conocimiento</a>
+                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/11/01/conocimiento/' target='_blank'>Conocimiento</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/11/01/escuela-virtual/'>Escuela Virtual</a>
+                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/2022/11/01/escuela-virtual/' target='_blank'>Escuela Virtual</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/contacto/'>Contacto</a>
+                            <a className="nav-link text-color-header text-decoration-none" href='https://www.pactodeproductividad.com/contacto/' target='_blank'>Contacto</a>
                         </li>
 
 

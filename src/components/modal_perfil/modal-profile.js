@@ -1,7 +1,9 @@
+/* eslint-disable react/jsx-pascal-case */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Editar_perfil from '../editar_perfil/editar_perfil';
+import Edit_profile from '../edit_profile/edit_profile';
 
 const ModalLogin = ({ show, handleClose, usuario }) => {
 
@@ -12,7 +14,7 @@ const ModalLogin = ({ show, handleClose, usuario }) => {
                 <Modal.Title>Actualizar perfil</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <Editar_perfil usuario={usuario}/>
+                <Edit_profile usuario={usuario}/>
             </Modal.Body>
 
         </Modal>

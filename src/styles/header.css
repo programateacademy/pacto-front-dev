@@ -11,3 +11,20 @@
 .color-icon-l {
 color: #006186 !important;
 }
+
+
+.align-items {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.nav-item {
+   border-bottom: 2px solid transparent;
+   /* transition: all 1s; */
+}
+
+.nav-item:hover {
+   border-bottom: 2px solid #006186;
+   transition: ease-out 2s;
+}

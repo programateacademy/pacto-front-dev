@@ -21,3 +21,20 @@
 .color-icon {
     color: #006186 !important;
 }
+
+.icon--youtube {
+    width: 20px;
+    color: red;
+}
+
+.link--edit--profile {
+    color: black;
+}
+
+.link--edit--profile:hover {
+    color: black;
+}
+
+.fw-bold {
+    cursor: pointer;
+}

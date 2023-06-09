@@ -1,11 +1,36 @@
 import { faBars, faUser, faMagnifyingGlass, faUniversalAccess, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Logo from '../img/cropped-logo_positivo.png';
+import Logo from '../../assets/img/cropped-logo_positivo.png';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Header_post extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            token: null,
+            username: null 
+        };
+    }
+
+    componentDidMount() {
+		let _token = sessionStorage.getItem("token")
+		let _username = sessionStorage.getItem("username")
+		if(_token){
+			this.setState({ token: _token });
+		}
+        if(_username){
+			this.setState({ username: _username });
+		}
+	}
+
+
+    logOut(){
+        sessionStorage.clear();
+        window.location.href = '/'
+    }
+
 
     render() {
 
@@ -35,7 +60,7 @@ class Header_post extends React.Component {
                         </a>
                     </div>
                     <div>
-                        <Link to="/home">
+                        <Link to={`/home/${this.state.username}`}>
                             <button
                                 className="btn btn-link ms-3 text-dark"
                                 type="button"
@@ -45,25 +70,34 @@ class Header_post extends React.Component {
                         </Link>
                     </div>
 
-                    <div class="input-group rounded ms-4 me-5">
-                        <input type="search" class="form-control rounded" placeholder="Buscar..." aria-label="Search" aria-describedby="search-addon" />
-                        <span class="input-group-text border-0" id="search-addon">
+                    <div className="input-group rounded ms-4 me-5">
+                        <input type="search" className="form-control rounded" placeholder="Buscar..." aria-label="Search" aria-describedby="search-addon" />
+                        <span className="input-group-text border-0" id="search-addon">
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </span>
                     </div>
 
 
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item me-2">
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li className="nav-item me-2">
                             <div className="d-flex align-items-center">
                                 <FontAwesomeIcon className="color-icon-l" icon={faUser} size="xl" />
-                                <NavDropdown id="navbarScrollingDropdown">
-                                    <NavDropdown.Item href="/login">Iniciar sesión</NavDropdown.Item>
-                                    <NavDropdown.Item href="/register">Registrarse</NavDropdown.Item>
-                                </NavDropdown>
+                                    {
+                                        this.state.token == null ?
+                                        <NavDropdown id="navbarScrollingDropdown">
+                                            <NavDropdown.Item href="/login">Iniciar sesión</NavDropdown.Item>
+                                            <NavDropdown.Item href="/register">Registrarse</NavDropdown.Item>
+                                        </NavDropdown>
+                                        :
+                                        <NavDropdown id="navbarScrollingDropdown">
+                                            <NavDropdown.Item href={`/profile/${this.state.username}`}>Perfil</NavDropdown.Item>
+                                            <NavDropdown.Item onClick={()=> this.logOut()}>Cerrar sesión</NavDropdown.Item>
+                                        </NavDropdown>
+                                    }
+                                    
                             </div>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <div className="d-flex align-items-center space">
                                 <FontAwesomeIcon className="color-icon-l" icon={faUniversalAccess} size="xl" />
                                 <NavDropdown id="navbarScrollingDropdown">
